@@ -234,3 +234,56 @@ li:nth-child(3) a:hover::after,
 li:nth-child(3) a:focus::after{
   transform: scale(1);
 }
+
+.swiper-gallery-container {
+  overflow: hidden;
+  position: relative;
+  margin: 20px 0;
+}
+.swiper-gallery-container .swiper-gallery {
+  width: 100%;
+  overflow-y: auto;
+}
+.swiper-gallery-container::before,
+.swiper-gallery-container::after {
+  width: 2.5rem;
+  height: 100%;
+  position: absolute;
+  content: "";
+  top: 0;
+}
+.swiper-gallery-container::before {
+  background: linear-gradient(90deg, #fbf7ef, #fbf7ef00);
+  left: 0;
+  
+}
+.swiper-gallery-container::after {
+  background: linear-gradient(-90deg, #fbf7ef, #fbf7ef00);
+  right: 0;
+}
+.swiper-gallery-container .swiper-gallery ul {
+  list-style: none;
+  margin: 0;
+  padding: 0 15px;
+  width: 150%;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+}
+.swiper-gallery-container .swiper-gallery ul li {
+  display: inline-block;
+  list-style: none;
+  margin: 0;
+  padding: 0 4rem 0 0;
+}
+.swiper-gallery-container .swiper-gallery ul li:last-child {
+  padding-right: 0;
+}
+
+
+.video-container {
+  position: relative;
+  min-height: 300px;
+}
+.video-container .bg-video {
+  width: 100%;
+}
